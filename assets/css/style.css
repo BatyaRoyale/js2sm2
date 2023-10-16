@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+.slider{
+    height: 650px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.slide{
+    height: 650px;
+    width: 500px;
+}
+.slides{
+    position: absolute;
+    display: flex;
+    left:0;
+    top: 0;
+    transition: all .3s ease-in-out;
+
+}
+.animated-button {
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 15px 30px;
+    overflow: hidden;
+    border: 2px solid;
+    border-bottom-width: 4px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgba(30, 255, 188, 1);
+    background: rgba(255, 255, 255, 1);
+    transition: color 0.3s, background 0.5s;
+}
+.animated-button:hover {
+    animation: stripes 0.75s infinite linear;
+    background: linear-gradient(
+        45deg,
+        rgba(30, 255, 188, 1) 25%,
+        rgba(255, 255, 255, 1) 25%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(30, 255, 188, 1) 50%,
+        rgba(30, 255, 188, 1) 75%,
+        rgba(255, 255, 255, 1) 75%,
+        rgba(255, 255, 255, 1)
+    );
+    background-size: 10px 10px;
+    color: #ff50e5;
+}
+    @keyframes stripes {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 0;
+    }
+}
